@@ -1,0 +1,24 @@
+.classActiveLink{
+  color:red;
+  background-color:orange;
+}
+
+*{
+  /*text-align: center;*/
+}
+
+#titleHome{
+  margin: 50px;
+}
+
+pre{
+  font-family: "Courier New";
+  font-size: 20px;
+  background-color: rgba(255, 255, 128, 0);
+  padding-top: 50px;
+  border: none;
+}
+
+.preDark{
+
+}

@@ -1,0 +1,9 @@
+maj des paquets (programmes)	sudo apt update
+installation des maj	sudo apt upgrade
+installer le paquet screenfetch	sudo apt install screenfetch
+supprimer un paquet	sudo apt remove package
+supprimer un paquet et ses dépendances	sudo apt autoremove package
+chercher un paquet	sudo apt search package
+afficher les détails d’un paquet	sudo apt show package
+fichier de configuration des dépôts 	/etc/apt/sources.list
+mettre le clavier en français	setxkbmap fr

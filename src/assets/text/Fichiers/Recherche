@@ -1,0 +1,26 @@
+chercher le mot « cisco » dans le fichier file en affichant les lignes	grep cisco file -n
+chercher le mot « function » dans les fichiers file2 et file3	grep “function” file2.php file3.php
+chercher les chaines commençant par « no » dans le fichier sample	egrep “no.*” sample
+en affichant la ligne à laquelle se trouvent les résultats	-n
+chercher le mot « function » dans les fichiers du répertoire actuel	grep “function” ./*
+sans tenir compte de la casse	-i
+###
+chercher dans le répertoire actuel un fichier dont le nom commence par file, de type fichier	find . -name “file*” -type f
+même chose, variante	find . type -f | egrep “/file[0-9]$”
+même chose, de type dossier	-type d
+chercher dans toute l’arborescence	find /
+trouver dossiers dont le nom est compris entre 10 et 19	find . -type d | egrep “^\./[0-9]{2}$”
+regex : chercher les chiffres de 1 à 3 ou 0	[1-30]
+trouver les fichiers qui s’appellent ba, Abei et abeille, dans le répertoire courant	find . -type f | egrep “^\./[abA].*” (.* est facultatif)
+chercher les fichiers commençant par file1, file2, file3, … etc. et les supprimer	find . -name “file[0-9]“ | xargs rm
+chercher dans le répertoire courant uniquement	find . -maxdepth 1 (mettre l’argument maxdepth en premier, sinon avertissement !)
+chercher les dossiers commençant par B dans le répertoire courant	find . -maxdepth 1 -type d | egrep “^\./B.*”
+chercher dans le répertoire courant et ses sous-dossiers	find . -maxdepth 2
+accédé il y a plus de 90 jours	-atime +90
+créé il y a moins de 5 jours	-ctime -5
+modifié il y a 3 jours	-mtime 3
+une taille de moins de 1 mega	-size -1M
+une taille de plus de 10 Mo	-size +10M
+une taille comprise entre 20 et 40 Mo	-size +20M -size -40M
+mettre root comme propriétaire sur les fichiers trouvés	-exec chown root {} \;
+afficher les fichiers trouvés	-exec cat {} \;

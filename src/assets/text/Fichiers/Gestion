@@ -1,0 +1,51 @@
+créer fichier dans dossier différent	touch dir/file
+créer fichiers avec petite boucle	touch file{1..9}
+créer les fichiers 1 à 10 dans le dossier dir	touch dir/file{1..10}
+###
+lister la taille du répertoire avec unité	ls -lh
+lister les fichiers et dossiers du répertoire actuel	ls .
+!!	ls
+lister les fichiers et dossiers du répertoire parent	ls ..
+lister les fichiers et dossiers à la racine	ls /
+lister les fichiers commençant par f	ls f*
+lister les fichiers commençant par a ou A	ls [aA]*
+lister les fichiers ne contenant pas a	ls [!a]*
+lister les fichiers par date de modif (le plus récent en premier)	ls -t	(time)
+pareil, en inversant l’ordre	ls -tr	(reverse)
+###
+lister les dossiers uniquement, avec ls	ls -d */	Video/, Images/, etc
+lister les dossiers uniquement (commande)	dir
+!!	l
+lister les dossiers commençant par B	ls -d B*/
+afficher le contenu d’un dossier	ls dir
+afficher l’arborescence d’un dossier	tree dir
+afficher l’arbo d’une longueur de 2 max	tree -L 2
+compter le nombre de fichiers et dossiers dans le répertoire courant	ls | wc -w
+afficher tous les fichiers, ceux cachés également (commencent par un point)	ls -a
+###
+copier fichier1 dans un nouveau fichier2	cp fichier1 fichier2
+copier dossier1 dans un nouveau dossier2	cp -r dossier1 dossier2
+renommer file1 en file1Renom	mv file1 file1Renom
+renommer dir1 en dir2	mv dir1 dir2
+supprimer un fichier	rm file
+supprimer un fichier contenu dans le dossier dir	rm dir/file
+supprimer des fichiers avec petite boucle	rm file{1..9}
+supprimer ds le répertoire courant les fichiers commançant par nb	ls nb* | xargs rm
+supprimer le dossier dir	rm -d dir	directory
+supprimer le dossier dir (ne marche qu’avec des dossiers vides)	rmdir dir
+supprimer un dossier non vide	rm -dr	recursive
+supprimer avec confirmation (très utile au sein de scripts)	rm -i
+###
+comparer 2 fichiers (silencieux si les fichiers sont identiques)	cmp file1 file2
+comparer 2 fichiers en affichant les différences (silencieux si les fichiers sont identiques)	diff file1 file2
+comparer 2 fichiers en affichant common and distinct lines 	comm
+###
+Créer un lien physique à partir de file	ln file fileP
+Afficher les inodes (contenu) des fichiers	ls -i
+créer un lien symbolique	ln -s file fileS
+Créer un lien physique à partir de file	ln file fileP
+Afficher les inodes (contenu) des fichiers	ls -i
+créer un lien symbolique	ln -s file fileS
+###
+ouvrir une image	feh file
+ouvrir un document pdf	xdg-open file

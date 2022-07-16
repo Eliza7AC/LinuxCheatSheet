@@ -1,0 +1,19 @@
+informations sur le cpu	lscpu
+afficher les disques durs (sda1, a=disque, 1=partition)	lsblk (list block devices)
+infos sur les usb	lsusb
+infos matériel	lshw (hardware)
+lister les fichiers ouverts	lsof (open file)
+###
+mémoire RAM libre	free
+mémoire RAM libre avec unité	free -h
+mémoire disque utilisée	du (disk usage)
+en résumant, avec unité	du -sh (sum, human readable)
+mémoire libre/utilisée selon l’emplacement	df (disk free)
+afficher la mémoire tampon de message du noyau	dmesg
+###
+monter une clef usb ou un disque dur	mount
+démonter un périphérique	umount
+installer depuis une source web	wget
+répertoire des fichiers log	/var/log
+fichiers log des deamons (programmes en arrière-plan)	/var/log/boot.log
+log sécurité (voir si un  utilisateur a tenté d’utiliser su, sudo ou autre) 	/var/log/secure

@@ -1,0 +1,9 @@
+Hasher un fichier en sha1	file | sha1sum
+Hasher un fichier en sha256	file | sha256sum
+identifier le hash d'un fichier	hashid file
+ 	hashcat
+ 	hashcat -m=500 cisco rockyou.txt
+ 	john –-list=formats
+casser le hash 	john –-format=raw-sha256 cisco rockyou.txt
+ 	john –-show cisco // pour voir les mots de passe qui ont été craqués
+CrackStation	https://crackstation.net/

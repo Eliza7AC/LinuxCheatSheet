@@ -1,0 +1,11 @@
+<h2 style="margin-bottom: 30px">
+  [ <span style="text-transform:uppercase" [ngStyle]="{'color': colorTitle}"> {{ category }} </span> ]
+  ~ <span [ngStyle]="{'color': color}">{{ subCategoryPrint }}</span>
+</h2>
+
+
+<div *ngFor="let array of commands">
+  <app-array [commands]="this.array"></app-array>
+</div>
+
+

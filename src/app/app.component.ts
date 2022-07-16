@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+const LIGHT = 'LIGHT';
+const DARK = 'DARK';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'untitled16';
+
+
+  theme = LIGHT;
+
+  themeIsLight(){
+    return this.theme == LIGHT;
+  }
+
+  changeTheme(){
+    if (this.theme==LIGHT){
+      this.theme = DARK;
+    }
+    else{
+      this.theme = LIGHT;
+    }
+  }
+
+
 }

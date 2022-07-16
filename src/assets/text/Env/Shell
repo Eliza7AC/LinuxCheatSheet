@@ -1,0 +1,13 @@
+afficher le shell utilisé	echo $SHELL
+afficher la version du shell utilisé	$SHELL –-version
+changer le shell utilisé par bash	chsh -s /usr/bin/bash
+afficher la liste des shells disponibles	cat /etc/shells
+###
+afficher où est stocké l’historique	echo $HISTFILE
+montrer l’historique	history
+effacer la ligne 421 de l’historique	history -d 421
+effacer l’historique à la ligne 76 puis les 2 lignes suivantes	history -d 76 && history -d 76 && history -d 76
+effacer l’historique en entier	history -c
+###
+informations sur la commande ls	whatis ls
+!!	info ls

@@ -1,0 +1,107 @@
+<!-- * * * BUTTONS * * * -->
+
+<div class="button" [ngStyle]="{'background-color': colorArray}" (mouseover)="{'color':'red'}">
+  <div>
+    <div class="buttonDiv" (click)="hideDescriptions()" *ngIf="areDescriptionsVisible">
+      Cacher les descriptions</div>
+
+    <div class="buttonDiv" (click)="showDescriptions()" *ngIf="!areDescriptionsVisible">
+      Montrer les descriptions</div>
+  </div>
+
+  <div class="">
+    <div class="buttonDiv" (click)="hideCommands()" *ngIf="areCommandsVisible">
+      Cacher les commandes</div>
+    <div class="buttonDiv" (click)="showCommands()" *ngIf="!areCommandsVisible">
+      Montrer les commandes</div>
+  </div>
+</div>
+
+
+
+<div [ngClass]="'wrapper'" *ngFor="let com of commands; let i = index" >
+
+  <div [ngClass]="'item'"
+       (mouseenter)="revealDescription(i)"
+       (mouseleave)="concealDescription(i)"
+       [ngStyle]="{'border':'1px solid ' + colorArray}"
+  >
+      <span [ngClass]="com.statusDescription == 'visible'? 'visibleItem description' : 'hiddenItem description'">
+        {{ com.description }} <!-- i = ligne -->
+      </span>
+  </div>
+
+  <div [ngClass]="'item'"
+       (mouseenter)="revealCmd(i)"
+       (mouseleave)="concealCmd(i)"
+       [ngStyle]="{'border':'1px solid ' + colorArray}"
+  >
+    <span [ngClass]="com.statusCommand == 'visible' ? 'visibleItem' : 'hiddenItem'">
+       {{ com.command }}
+    </span>
+  </div>
+
+</div>
+
+
+<!--<div [ngClass]="'wrapper wrapperFichier'" *ngFor="let com of commands; let i = index" >-->
+
+<!--  <div [ngClass]="'item'">-->
+
+<!--      <span-->
+<!--        (mouseenter)="revealDescription()"-->
+<!--        [ngClass]="com.statusDescription == 'visible'? 'descriptionVisible' : 'descriptionHidden'"-->
+<!--      >-->
+<!--        {{i}} {{ com.description }} [ {{ com.statusDescription }} ] &lt;!&ndash; i = ligne &ndash;&gt;-->
+<!--      </span>-->
+<!--  </div>-->
+
+<!--  <div [ngClass]="'item'">-->
+<!--    <span [ngClass]="areCommandsVisible? 'commandVisible' : 'commandHidden' ">-->
+<!--       {{i}} {{ com.command }} [ {{ com.statusCommand }} ]-->
+<!--    </span>-->
+<!--  </div>-->
+
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+<!--<div [ngClass]="'wrapper wrapperFichier'">-->
+<!--  -->
+<!--  <div [ngClass]="'item'" (mouseenter)="revealDescription()" (mouseleave)="concealDescription()">-->
+<!--    <span [ngClass]="isDescriptionVisible()? 'descriptionVisible' : 'descriptionHidden' ">-->
+<!--      {{ description }}-->
+<!--    </span>-->
+<!--  </div>-->
+<!--  -->
+<!--  <div class="item" (mouseenter)="revealCmd()" (mouseleave)="concealCmd()">-->
+<!--    <span [ngClass]="isCommandVisible()? 'commandVisible' : 'commandHidden' ">-->
+<!--      {{ command }}-->
+<!--    </span>-->
+<!--  </div>-->
+
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+<!--<app-command *ngFor="let com of commands"-->
+<!--             [description]="com.description"-->
+<!--             [command]="com.command"-->
+<!--             [statusCommand]="com.statusCommand"-->
+<!--             [statusDescription]="com.statusDescription"-->
+<!--             [i] ="com.i"-->
+<!--&gt;</app-command>-->
+
+<div style="margin-bottom: 50px"></div>

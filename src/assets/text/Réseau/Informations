@@ -1,0 +1,32 @@
+afficher fichier de configuration host	cat /etc/hosts
+afficher les droits du fichier host	ls -l /etc | egrep “^hosts$”
+infos sur soi (hôte)	hostnamectl
+interface réseau / adresse ip, mac	ifconfig
+interface réseau avec numéro	ip addr
+interface réseau sans fil 	iwconfig
+désactiver l’interface ethernet (attention, avec ifconfig, l’interface n’est plus affichée ensuite)	ifconfig interface down
+activer l’interface ethernet	ifconfig interface up
+voir son adresse mac (alternative)	macchanger -s interfaceReseau
+Lister les fabricants selons les 3 premiers octets mac	macchanger -l
+###
+statistiques des interfaces réseaux	netstat -i
+stats toutes co	netstat -a
+stats table de routage	netstat -r
+stat réseau route, avec ip	netstat -rn
+stats réseau, TCP uniquement	netstat -t
+stats co ouvertes	netstat -uta
+stats co ouvertes, avec ip	netstat -utan
+stats connexions ouvertes, sans UDP	netstat -ta
+stats des connexions en état d’écoute	netstat -lt
+stats résumé	netstat -s
+###
+obtenir l’ip de google.com	host google.com
+obtenir le nom d’hôte de l’adresse 34.102.132.3	host 34.102.132.3
+avoir l’adresse ip du serveur (DNS)	nslookup google.com
+pinger google	ping google.com
+afficher la route pour joindre google.com	traceroute google.com
+table de routage commande	route
+table ARP (correspondance ip/mac)	arp
+pareil, en affichant les ip	arp -n
+Se mettre en écoute au port 12345	nc -p 12345
+	iptables

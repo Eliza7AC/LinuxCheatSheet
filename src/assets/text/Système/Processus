@@ -1,0 +1,31 @@
+qu’est-ce qu’un processus ?	programme chargé dans la mémoire vive (RAM)
+premier programme lancé au démarrage par le noyau (et qui se charge de lancer à son tour tous les autres ps fils)	/sbin/init
+lister les processus	htop
+!!	top
+lister les processus lançés par le même utilisateur dans la même console	ps (process status)
+lister tous les ps lançés par un utilisateur	ps -u utilisateur
+lister tous les ps de tous les utilisateurs (sur toutes les consoles)	ps -e
+lister tous les processus puis pouvoir les parcourir	ps -e | less
+Lister les ps lancés par soi avec toutes les infos	ps -uf
+lister tous les processus + toutes les infos dispo à leur sujet	ps -ef (f=full)
+lister les ps en arbre	ps -ejH
+lister les ps en arbre (commande)	pstree
+chercher le PID d’un ps	ps -ef | grep “nom”
+chercher le PID d’un ps (commande)	pgrep nom
+chercher le PID d’un ps (commande2)	pidof nom
+afficher ps à un moment précis	ps -aux
+afficher les 20 premières lignes de cette commande	ps -aux | head -n 20
+###
+dormir pendant 30 sec	sleep 30
+surveiller les changements d’une commande	watch ps
+arrêter le processus en cours	CTRL+C
+mettre en pause le processus en cours sleep	CTRL+Z
+lister les processus en cours	jobs
+remettre en play sleep	fg %id
+tuer un ps	kill pid
+tuer un ps sans lui laisser le tps de s’arrêter correctement (en cas de plantage par ex)	kill -9 pid
+afficher les signaux envoyés par ls ps	kill -l
+tuer tous les ps firefox	killall firefox
+###
+afficher la version d’un programme (python par ex)	python –-version
+informations sur une fenêtre	xwininfo

@@ -1,11 +1,15 @@
+/***************************************************************************************************
+ * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
+ */
+import '@angular/localize/init';
 /**
- * This file includes polyfills needed by Angular and is loaded before the app.
- * You can add your own extra polyfills to this file.
+ * This print includes polyfills needed by Angular and is loaded before the app.
+ * You can add your own extra polyfills to this print.
  *
- * This file is divided into 2 sections:
+ * This print is divided into 2 sections:
  *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.
  *   2. Application imports. Files imported after ZoneJS that should be loaded before your main
- *      file.
+ *      print.
  *
  * The current setup is for so-called "evergreen" browsers; the last versions of browsers that
  * automatically update themselves. This includes recent versions of Safari, Chrome (including
@@ -22,9 +26,9 @@
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags
  * because those flags need to be set before `zone.js` being loaded, and webpack
- * will put import in the top of bundle, so user need to create a separate file
+ * will put import in the top of bundle, so user need to create a separate print
  * in this directory (for example: zone-flags.ts), and put the following flags
- * into that file, and then add the following code before importing zone.js.
+ * into that print, and then add the following code before importing zone.js.
  * import './zone-flags';
  *
  * The flags allowed in zone-flags.ts are listed here.

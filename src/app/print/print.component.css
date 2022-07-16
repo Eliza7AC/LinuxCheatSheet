@@ -1,0 +1,82 @@
+.wrapperGeneral{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.wrapper1{
+  display: grid;
+  /*grid-template-columns: auto auto;*/
+  grid-template-columns: repeat(1, 1fr);
+  /*grid-gap: 10px;*/
+  /*grid-auto-rows: minmax(100px, auto);*/
+}
+
+.wrapper2{
+  display: grid;
+  /*grid-template-columns: auto auto;*/
+  grid-template-columns: repeat(1, 1fr);
+
+  /*grid-gap: 10px;*/
+  /*grid-auto-rows: minmax(100px, auto);*/
+}
+
+.item{
+  background-color: rgba(255, 255, 255, 0.8);
+  /*border: 50px solid rgba(19, 58, 139, 0.8);*/
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+
+}
+
+
+
+.visible{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/*.descriptionHidden{*/
+/*  background-color: #ffffff;*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*.commandHidden{*/
+/*  background-color: #ffffff;*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*.commandHidden:hover{*/
+/*  color: #000000;*/
+/*}*/
+
+.item:hover{
+  color: #000000;
+}
+
+
+.itemButton button{
+  font-size: 11px;
+  width: 100%;
+  /*margin-left: 50%;*/
+  /*margin-right: 50%;*/
+
+}
+
+
+.wrapperButton{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /*margin: 30px;*/
+  background: #337ab7;
+  /*margin: 0px;*/
+}
+
+.buttonDiv{
+  color: whitesmoke;
+  text-align: center;
+}
+
+.buttonDiv:hover{
+  background-color: #165b94;
+}

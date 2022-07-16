@@ -1,0 +1,39 @@
+/**{*/
+/*  font-family: "Courier New";*/
+/*}*/
+
+/*.dropdown-menu{*/
+/*  !*color: red;*!*/
+/*  width:180px;*/
+/*  padding-left:5px;*/
+/*  box-shadow: none;*/
+/*  border-top: #f3f3f3;*/
+/*  background-color: #fcfcfc;*/
+/*  !*border-color: #f8f8f8;*!*/
+
+/*}*/
+
+/*.dropdown-item:hover{*/
+/*  color: rgb(37, 150, 245) !important;*/
+/*}*/
+
+/*!* * * DARK THEME * * *!*/
+/*.themeDark{*/
+/*  background-color: #333333;*/
+/*  color: #809ec0;*/
+/*  !*color: rgba(184, 63, 208, 0.8);*!*/
+/*}*/
+
+/*.navDark{*/
+/*  background-color: #2a2727;*/
+/*  color: white;*/
+/*}*/
+
+
+/*!* * * LIGHT THEME * * *!*/
+/*.themeLight{*/
+/*  !*background-color: #333333;*!*/
+/*  !*color: #ce0b63;*!*/
+/*}*/
+
+

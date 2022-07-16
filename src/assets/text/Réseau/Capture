@@ -1,0 +1,8 @@
+capturer les paquets réseaux	tcpdump
+lister les paquets réseaux puis les parcourir (ne s’arrête pas tant qu’on ne quitte pas)	tcpdump | less
+capturer 10 paquets réseaux	tcpdump -c 10
+capturer 10 paquets réseaux et les afficher	tcpdump -c 10 -A
+capturer 10 paquets sur l’interface eno1	tcpdump -c 10 -i eno1
+capturer 10 paquets sur le port 80	tcpdump -c 10 port 80
+capturer avec Wireshark	https://www.wireshark.org/
+intercepter une requête avec Burp Suite	https://portswigger.net/burp/communitydownload

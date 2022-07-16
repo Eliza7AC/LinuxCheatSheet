@@ -1,0 +1,7 @@
+archiver archive avec gz	tar -czvf archive.tar.gz (create, gzip, verbose, file name)
+archiver archive avec gz et les fichiers du dossier Images	tar -czvf archive.tar.gz ~/Images
+archiver archive gz en exluant les fichiers jpg	tar -czvf archive.tar.gz –-exclude=*.jpg
+lister les fichiers d’une archive	tar –tzvf archive.tar.gz
+extraire une archive	tar -xzvf archive.tar.gz
+compresser	gzip file
+décompresser	gunzip file

@@ -1,0 +1,5 @@
+Informations sur la distribution	uname -a
+Informations sur le système	screenfetch
+variables d'environnement	printenv
+variable d'env utilisateur	printenv USER
+variable d'env langue	printenv LANG

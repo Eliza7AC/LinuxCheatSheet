@@ -1,0 +1,16 @@
+### redirection si /print/cat/untrucqui n'existe pas
+
+### afficher les paramètres d'une commande avec une certaine transparence
+
+### mettre un lien direct en cas de http pour les commandes
+
+### popup au dessus de certains menus pour lister les commandes utilisées
+
+
+### Copyright dans le footer
+function Copyright(){
+return 1;
+}
+
+### faire un thème sombre comme celui de JetBrains
++ compatible avec DarkReader (car à l'heure actuelle pas compatible)

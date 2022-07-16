@@ -1,0 +1,10 @@
+avoir des infos sur google.com	whois google.com
+The Way Back machine	https://archive.org/web/
+The Harvester: récupérer emails liés à un site	https://github.com/laramies/theHarvester
+!!	theHarvester -d site.fr -b google (d domain, b base)
+Holehe : vérifier sur quel site est utilisé un email	https://github.com/megadose/holehe
+Skypli	https://skypli.com/
+###
+Google Dorks
+chercher un fichier "presentation" de type pdf	presentation filetype:pdf
+chercher une page contenant "home" dans le titre	intitle:home

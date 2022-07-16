@@ -1,0 +1,12 @@
+passer en mode root	sudo su
+quitter le mot root	exit
+fichier de config des utilisateurs	/etc/passwd
+mots de passe des utilisateurs (hashés)	/etc/shadow
+se connecter en tant qu’utilisateur Jean	sudo -i -u Jean
+donner les droits d’execution sur un fichier	chmod +x file
+de même, avec l’utilisateur uniquement	chmod u+x file
+enlever le droit d’écriture au groupe	chmod g-w file
+ajouter le droit de lecture aux autres	chmod o+r file
+faire les 2 derniers groupés (pas d’espace après la virgule)	chmod g-w,o+r file
+ajouter le droit de lecture et d’éxecution pour l’utilisateur	chmod u+rx file
+mettre root comme propriétaire du fichier file	chown root file

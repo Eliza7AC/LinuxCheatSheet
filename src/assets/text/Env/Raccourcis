@@ -1,0 +1,17 @@
+Copier (terminal)	CTRL+Shift+C
+Coller (terminal)	CTRL+Shift+V
+###
+Aller tout à gauche (terminal)	CTRL+A
+Aller tout à droite (terminal)	CTRL+E
+Effacer tout ce qui se trouve à gauche (terminal)	CTRL+U
+Effacer tout ce qui se trouve à droite (terminal)	CTRL+K
+Tout effacer (équivalent à 'clear')	CTRL+L
+###
+Répéter la commande précédente	!!
+Arrêter le processus en cours	CTRL+C
+Mettre en pause le processus en cours	CTRL+Z
+###
+Zoomer	CTRL+'+'
+Dézoomer	CTRL+'-'
+Redimensionner la fenêtre	Alt+F7
+Déplacer la fenêtre	Alt+F8

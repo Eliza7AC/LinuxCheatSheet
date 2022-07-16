@@ -1,0 +1,9 @@
+rediriger dans un nouveau fichier (écrase le fichier s’il existe déjà)	stream > file
+rediriger à la fin d’un fichier (append)	stream >> file
+rediriger les erreurs dans un nouveau fichier fileError	stream 2> fileError
+rediriger les erreurs à la fin du fichier fileError déjà existant	stream 2>> fileError
+mettre les erreurs avec le reste (mettre sortie d’erreurs dans la sortie standard)	stream > file 2>&1
+pareil, dans un fichier déjà existant	stream >> file 2>&1
+afficher le contenu depuis un fichier	cat < file
+traiter les entrées au clavier, ligne par ligne	sort << FIN (taper FIN mettra un terme à la commande)
+trier puis supprimer les doublons de ce que l’on tape au clavier	sort << ! | uniq (taper ! mettra un terme à la commande)
