@@ -1,5 +1,7 @@
 <!-- * * * BUTTONS * * * -->
 
+<span [ngStyle]="{'color':colorArray,'font-size':'25px'}">{{ title }}</span>
+
 <div class="button" [ngStyle]="{'background-color': colorArray}" (mouseover)="{'color':'red'}">
   <div>
     <div class="buttonDiv" (click)="hideDescriptions()" *ngIf="areDescriptionsVisible">
@@ -16,7 +18,6 @@
       Montrer les commandes</div>
   </div>
 </div>
-
 
 
 <div [ngClass]="'wrapper'" *ngFor="let com of commands; let i = index" >
@@ -37,7 +38,14 @@
        [ngStyle]="{'border':'1px solid ' + colorArray}"
   >
     <span [ngClass]="com.statusCommand == 'visible' ? 'visibleItem' : 'hiddenItem'">
-       {{ com.command }}
+
+      <span *ngIf="isLink(com.command)">
+        <a href="{{ com.command }}">{{ com.command }}</a>
+      </span>
+
+      <span *ngIf="!isLink(com.command)">
+        {{ com.command }}
+      </span>
     </span>
   </div>
 

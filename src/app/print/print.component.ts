@@ -35,6 +35,7 @@ export class FileComponent implements OnInit {
 
   @Input() filePath: string;
   commands: any[][];
+  title: string;
   colorTitle: any; // used for category (BEFORE iteration = first color)
   color: any; // used for arrays AND subcat (AFTER iteration = last color)
 
@@ -189,10 +190,19 @@ export class FileComponent implements OnInit {
           this.descriptionFile = res[0];
           this.cmdFile = res[1];
 
-          /** very first array */
+          /** * * * * * * * * *
+          /** very first array
+          /** * * * * * * * * */
           if (isFirstTime){
+
+            if (this.descriptionFile.startsWith('###')){
+              this.title = this.descriptionFile.split('###')[1];
+              continue; // to retrieve data from next line
+            }
+
             this.commands = [
               [{
+                title: this.title,
                 description: this.descriptionFile,
                 command: this.cmdFile,
                 statusDescription: VISIBLE,
@@ -206,18 +216,27 @@ export class FileComponent implements OnInit {
             continue; // avoiding to repeat first line twice
           }
 
-          /** new array */
+          /** * * * * * *
+          /** new array
+          /** * * * * */
           if (this.descriptionFile.startsWith('###')){
-            let title = this.descriptionFile.split('###')[1];
+            this.title = this.descriptionFile.split('###')[1];
             newArray = true;
             continue; // to retrieve data from next line
           }
+
           if (newArray){
             // update color of following arrays
             this.color = this.colorAugmented();
 
+            // if (this.descriptionFile.startsWith('🌍 ')){
+            //   alert('lien!');
+            //   this.cmdFile = '<a href="'+this.cmdFile+'">'+this.cmdFile+'</a>'
+            // }
+
             this.commands.push(
               [{
+                title: this.title,
                 description: this.descriptionFile,
                 command: this.cmdFile,
                 statusDescription: VISIBLE,
@@ -229,9 +248,13 @@ export class FileComponent implements OnInit {
             );
             newArray = false;
           }
-          /** new line */
+
+          /** * * * * *
+          /** new line
+          /** * * * * */
           else{
             this.commands[this.commands.length-1].push({
+              title: this.title,
               description: this.descriptionFile,
               command: this.cmdFile,
               statusDescription: VISIBLE,

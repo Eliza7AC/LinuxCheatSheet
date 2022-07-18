@@ -16,6 +16,7 @@ export class ArrayComponent implements OnInit {
 
   /** just one simple array */
   @Input() commands: any;
+  title: string;
   colorArray: string;
 
   constructor(private route: ActivatedRoute, public router: Router) { }
@@ -23,6 +24,13 @@ export class ArrayComponent implements OnInit {
   ngOnInit(): void {
     // alert(this.commands[0].colorArray)
     this.colorArray = this.commands[0].colorArray
+
+    // TODO tile in arr
+    this.title = this.commands[0].title
+  }
+
+  isLink(str: string){
+    return str.startsWith('http');
   }
 
 

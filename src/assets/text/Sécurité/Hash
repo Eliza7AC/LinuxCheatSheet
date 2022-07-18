@@ -6,4 +6,4 @@ identifier le hash d'un fichier	hashid file
  	john –-list=formats
 casser le hash 	john –-format=raw-sha256 cisco rockyou.txt
  	john –-show cisco // pour voir les mots de passe qui ont été craqués
-CrackStation	https://crackstation.net/
+🌍 CrackStation	https://crackstation.net/

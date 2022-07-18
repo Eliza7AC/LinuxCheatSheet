@@ -5,3 +5,4 @@ bruteforcer les répertoires	gobuster dir -u http://www.site.com -w /usr/share/w
 sous-domaines d'un site 	dnsrecon
 sous-domaines d'un site 	sublist3r
 sous-domaines d'un site 	ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.7.82 -fs {size}
+faille sql 	sqlmap

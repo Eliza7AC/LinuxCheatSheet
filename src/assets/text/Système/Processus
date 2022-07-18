@@ -16,6 +16,10 @@ chercher le PID d’un ps (commande2)	pidof nom
 afficher ps à un moment précis	ps -aux
 afficher les 20 premières lignes de cette commande	ps -aux | head -n 20
 ###
+répertoire des fichiers log	/var/log
+fichiers log des deamons (programmes en arrière-plan)	/var/log/boot.log
+log sécurité (voir si un  utilisateur a tenté d’utiliser su, sudo ou autre) 	/var/log/secure
+###
 dormir pendant 30 sec	sleep 30
 surveiller les changements d’une commande	watch ps
 arrêter le processus en cours	CTRL+C
