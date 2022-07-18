@@ -1,3 +1,4 @@
+### Général
 afficher fichier de configuration host	cat /etc/hosts
 afficher les droits du fichier host	ls -l /etc | egrep “^hosts$”
 infos sur soi (hôte)	hostnamectl
@@ -8,6 +9,10 @@ désactiver l’interface ethernet (attention, avec ifconfig, l’interface n’
 activer l’interface ethernet	ifconfig interface up
 voir son adresse mac (alternative)	macchanger -s interfaceReseau
 Lister les fabricants selons les 3 premiers octets mac	macchanger -l
+table de routage commande	route
+table ARP (correspondance ip/mac)	arp
+pareil, en affichant les ip	arp -n
+Se mettre en écoute au port 12345	nc -p 12345
 ###
 statistiques des interfaces réseaux	netstat -i
 stats toutes co	netstat -a
@@ -19,14 +24,20 @@ stats co ouvertes, avec ip	netstat -utan
 stats connexions ouvertes, sans UDP	netstat -ta
 stats des connexions en état d’écoute	netstat -lt
 stats résumé	netstat -s
-###
+### Pare-feu
+	iptables
+### Reconnaissance passive
+query WHOIS servers	whois
+query DNS servers	nslookup
+avoir l’adresse ip du serveur DNS de google	nslookup google.com
+query DNS servers	dig
+	https://dnsdumpster.com/
+	https://www.shodan.io/
+### Reconnaissance active
+identifier les technologies utilisées par un site	https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/
 obtenir l’ip de google.com	host google.com
 obtenir le nom d’hôte de l’adresse 34.102.132.3	host 34.102.132.3
-avoir l’adresse ip du serveur (DNS)	nslookup google.com
 pinger google	ping google.com
 afficher la route pour joindre google.com	traceroute google.com
-table de routage commande	route
-table ARP (correspondance ip/mac)	arp
-pareil, en affichant les ip	arp -n
-Se mettre en écoute au port 12345	nc -p 12345
-	iptables
+requête TCP vers un serveur	telnet MACHINE_IP PORT
+requête TCP/UDP vers un serveur nc MACHINE_IP PORT
